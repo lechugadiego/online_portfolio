@@ -68,6 +68,27 @@
 								<!-- Text stuff -->
 									<h2>U.S. Army - DEVCOM Analysis Center <br />
 										Data Scientist & Software Engineer - Team Lead</h2>
+									
+									<div class="slideshow-container">
+										<div class="mySlides fade">
+											<img src="images/dac/group-zoom-final-presentations-dac.png" alt="U.S. Army DEVCOM zoom call" style="width:100%">
+										</div>
+
+										<div class="mySlides fade">
+											<img src="images/dac/group-zoom-dac.png" alt="U.S. Army DEVCOM zoom call" style="width:100%">
+										</div>
+
+										<!-- Navigation arrows -->
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									</div>
+									
+									<!-- The dots/circles -->
+									<div style="text-align:center">
+										<span class="dot" onclick="currentSlide(1)"></span>
+										<span class="dot" onclick="currentSlide(2)"></span>
+									</div>
+
 									<ul>
 										<li>Led 6-person team developing ML-based security tool that 
 											improved penetration testing efficiency by 30% using <b>Python</b>.</li>
@@ -86,6 +107,9 @@
 
 									<h2>National Science Foundation - Texas State University<br />
 										Machine Learning and AI Research Assistant</h2>
+										<div class="image main">
+											<img src="images/nsf.jpg" alt="NSF Research" />
+										</div>
 										<ul>
 											<li>Worked on a team funded by the NSF to develop a 
 												Smartwatch fall / injury detection method, in <b>Python</b>.</li>
@@ -188,6 +212,54 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+			let slideIndex = 1;
+			let slideInterval;
+
+			showSlides(slideIndex);
+			startAutoSlide();
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			  resetAutoSlide();
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			  resetAutoSlide();
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+
+			function startAutoSlide() {
+			  slideInterval = setInterval(function() {
+				plusSlides(1);
+			  }, 5000); // Change image every 5 seconds
+			}
+
+			function resetAutoSlide() {
+			  clearInterval(slideInterval);
+			  startAutoSlide();
+			}
+			</script>
 
 	</body>
 </html>
