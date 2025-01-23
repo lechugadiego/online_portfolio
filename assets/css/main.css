@@ -4687,3 +4687,25 @@ input, select, textarea {
 		}
 
 	}
+
+.bottom-nav {
+    text-align: center;
+    margin: 2em 0;
+    padding: 1em;
+    border-top: 1px solid rgba(212, 212, 255, 0.1);
+}
+
+.bottom-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bottom-nav .links {
+    margin-bottom: 1em;
+}
+
+.bottom-nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
