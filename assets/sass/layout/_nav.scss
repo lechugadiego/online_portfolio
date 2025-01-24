@@ -59,11 +59,9 @@
 					}
 
 					&.active {
-						background-color: _palette(invert, fg);
-
 						a {
-							color: _palette(invert, bg);
-
+							color: _palette(invert, fg);
+							
 							&:hover {
 								color: _palette(invert, accent) !important;
 							}
