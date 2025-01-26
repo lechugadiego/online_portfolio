@@ -4776,3 +4776,18 @@ input, select, textarea {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2em auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
